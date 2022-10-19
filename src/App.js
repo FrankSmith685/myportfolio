@@ -1,3 +1,5 @@
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
+
 import Contacto from "./components/Contactos";
 import Inicio from "./components/Inicio";
 import NavBar from "./components/NavBar";
@@ -7,26 +9,21 @@ import Teconologias from "./components/Tecnologias";
 
 export default function App() {
   return (
-    <>
-      <NavBar />
-      <Inicio />
-      <Sobremi />
-      <Teconologias />
-      <Proyectos />
-      <Contacto />
+    <Router>
+      <Routes>
+        <Route exact path="/" element={[
+          <NavBar />,
+        <Inicio />,
+        <Sobremi />,
+        <Teconologias />,
+        <Proyectos />,
+        <br />,
+        <br />,<br />,<br />,<br />,<br />,<br />,<br />,<br />,<br />,<br />,
+        <Contacto />
+        ]} />
+        
+      </Routes>
 
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-
-    </>
+    </Router>
   )
 }

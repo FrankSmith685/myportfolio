@@ -17,6 +17,19 @@ module.exports = {
       },
       backgroundSize:{
         'size':'100% 90%'
+      },
+      keyframes: {
+        wiggle: {
+          'from':{left: '-96px'}, 
+          'to': { left: '0px' },
+          // '50%': { left: '0px' },
+        }
+      },
+      animation: {
+        'wiggle': 'wiggle 2s ease ',
+      },
+      padding:{
+        'max-tp':'700px'
       }
   },
   },

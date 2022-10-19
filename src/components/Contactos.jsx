@@ -1,4 +1,15 @@
+import emailjs from "emailjs-com"
+
 export default function Contacto(){
+
+    function enviarEmail(e){
+        e.preventDefault();
+        emailjs.sendForm('service_vh753sg','template_gcqkar9',e.target,'DrNbhXgHzsbP2s2Z0').then(res=>{
+            console.log(res);
+            alert("Se envió el mensaje correctamente");
+        })
+    }
+
     return(
         <>
         <a name="contacto">
@@ -15,22 +26,27 @@ export default function Contacto(){
                     <div>
                         <p className="text-white text-lg">Contáctese conmigo enviando el formulario o bien un mail a la siguiente casilla: f.s.b.rojas@gmail.com</p>
                     </div>
-                    <div className="flex flex-nowrap mt-4  h-auto">
+                    <form onSubmit={enviarEmail}>
+                        <div className="flex flex-nowrap mt-4  h-auto">
                         <div className="w-1/2 h-auto  m-1">
-                            <input type="text" className="w-full border-2 border-black rounded-3xl px-3" placeholder="Nombre Completo*"/>
+                            <input type="text" className="w-full border-2 border-black rounded-3xl px-3" name="nombre" placeholder="Nombre Completo*"/>
                         </div>
                         <div className="w-1/2 h-auto  m-1">
-                            <input type="text" className="w-full border-2 border-black rounded-3xl px-3" placeholder="Dirección de Email"/>
+                            <input type="text" className="w-full border-2 border-black rounded-3xl px-3" name="email" placeholder="Dirección de Email"/>
                         </div>
                         
-                    </div>
+                        </div>
                         <div className="mt-4 h-auto">
-                            <textarea className="w-full border-2 border-black rounded-3xl p-3" placeholder="Mensaje"></textarea>
+                            <textarea className="w-full border-2 border-black rounded-3xl p-3" name="mensaje" placeholder="Mensaje"></textarea>
                         </div>
                         <div className="text-center text-white font-bold font-serif text-lg">
-                            <button className="px-3 w-auto border-2 border-black rounded-2xl hover:border-white hover:bg-primary">Enviar</button>
+                            <button className="px-3 w-auto border-2 border-black rounded-2xl hover:border-white hover:bg-primary" type="submit">Enviar</button>
                         </div>
+                    </form>
+                    
+                        
                 </div>
+                    
                 <div className="w-1/6 ">
                     
                 </div>

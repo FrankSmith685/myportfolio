@@ -1,18 +1,23 @@
 export default function Proyectos(){
     return(
         <>
-        <a name="proyectos">
-        <div className="h-screen-1 pt-14">
+        <div className="pt-max-tp md:pt-0  -mb-14 md:mb-0"></div>
+            <a name="proyectos" className="mt-10"></a>
+        
+        <div className="md:h-screen-1 md:pt-14 pt-14 ">
+            <div className="pt-30 md:mt-0">
+            
+        
         <div className="flex flex-nowrap h-full">
                 <div className="w-1/6 ">
                     
                 </div>
                 <div className="w-5/6  h-full">
                     <div className="text-center">
-                        <span className="text-4xl font-bold font-serif  text-white">Proyectos</span>
+                        <span className="md:text-4xl text-2xl font-bold font-serif  text-white">Proyectos</span>
                     </div>
                     <div>
-                        <p className="text-white text-lg">Algunos de mis Proyectos:</p>
+                        <p className="text-white text-base md:text-lg">Algunos de mis Proyectos:</p>
                     </div>
                     <div className="flex flex-nowrap mt-4  h-auto">
                         <div className="w-1/3  bg-gray-700 h-auto text-center border-2 border-white rounded-3xl m-1">
@@ -31,8 +36,9 @@ export default function Proyectos(){
                     
                 </div>
             </div>
+        
         </div>
-        </a>
+        </div>
         </>
     )
 }
