@@ -60,7 +60,7 @@ import {useEffect} from 'react';
 	                        </button>
                         </div>
 			</div>
-            <div className=" hidden mobile-menu ">
+            <div className=" md:hidden mobile-menu ">
 	                        <ul className=" mt-2 ">
 		                        <li><a href="#inicio" class="block text-sm px-2 py-2 text-gray-500 hover:bg-gray-500 hover:text-gray-800 transition duration-300">Inicio</a></li>
 		                        <li><a href="#sobremí" class="block text-sm px-2 py-2 text-gray-500 hover:bg-gray-500 hover:text-gray-800 transition duration-300">Sobre mí</a></li>
