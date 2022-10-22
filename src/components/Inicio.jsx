@@ -58,7 +58,7 @@ export default function Inicio(){
 
                             </div>
                             <div className="flex items-center border-none bg-slate-600 p-2 relative -left-24 top-0 hover:left-0 transition-all duration-300 ease-linear hover:cursor-pointer">
-                            <a href="#">
+                            <a href="https://drive.google.com/file/d/1YcO6fVKTf-Y-UxFMZJ3BeVcdYFCRIJ60/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                                 <div className="flex items-center">
                                     <span className="pr-4">Curriculum</span><FaUser className="text-2xl"/>
                                 </div>
