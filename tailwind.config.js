@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       backgroundImage: {
       'hero-pattern': "url('images/banner.jpeg')",
+      
     },
       height:{
         'screen-1':'92.1vh'

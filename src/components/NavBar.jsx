@@ -1,5 +1,5 @@
 import {FaAlignJustify} from "react-icons/fa";
-
+import {useEffect} from 'react';
  
  export default function NavBar(){
     const logo1="</F";
@@ -9,10 +9,16 @@ import {FaAlignJustify} from "react-icons/fa";
         menu.classList.toggle("hidden");
         
     }
+
+    useEffect(()=>{
+        const menu = document.querySelector(".mobile-menu");
+        menu.classList.toggle("hidden");
+      },[document]);
+
     return(
         <>
         
-        <nav className="bg-gray-800 shadow-lg fixed  w-full py-2.5 md:py-0">
+        <nav className="bg-gray-800 shadow-lg fixed  w-full py-2.5 md:py-0 z-10">
 		    <div className="max-w-6xl mx-auto px-4 ">
 			    <div className="flex justify-between items-center">
                         <div>
@@ -54,8 +60,8 @@ import {FaAlignJustify} from "react-icons/fa";
 	                        </button>
                         </div>
 			</div>
-            <div className=" md:hidden mobile-menu">
-	                        <ul className=" mt-2">
+            <div className=" hidden mobile-menu ">
+	                        <ul className=" mt-2 ">
 		                        <li><a href="#inicio" class="block text-sm px-2 py-2 text-gray-500 hover:bg-gray-500 hover:text-gray-800 transition duration-300">Inicio</a></li>
 		                        <li><a href="#sobremí" class="block text-sm px-2 py-2 text-gray-500 hover:bg-gray-500 hover:text-gray-800 transition duration-300">Sobre mí</a></li>
 		                        <li><a href="#tecnologías" class="block text-sm px-2 py-2 text-gray-500 hover:bg-gray-500 hover:text-gray-800 transition duration-300">Tecnologías</a></li>
