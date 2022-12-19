@@ -1,6 +1,7 @@
 import images from "../images/Earth.gif"
 import { FaArrowRight,FaLinkedin,FaGithub,FaUser } from "react-icons/fa";
 import { BiMailSend } from "react-icons/bi";
+import ScrollIntoView from "react-scroll-into-view";
 
 export default function Inicio(){
     function copiarAlPortapapeles(id_elemento) {
@@ -21,13 +22,12 @@ export default function Inicio(){
     //     console.log("HOLA")
     // }
     return(
-        <>
-            <a name="inicio ">
-            <div className="bg-hero-pattern bg-cover h-screen w-full">
-            <div className="flex flex-nowrap h-full w-full bg-primary">
-                <div className="w-1/6 ">
-                    <div className="flex items-center absolute h-full"> 
-                        <div className="fixed w-auto text-white  h-auto">
+        <div id="inicio" className="w-full pt-0 md:pt-14  h-screen-1">
+            <div  className="bg-hero-pattern bg-cover w-full h-full">
+            <div className="md:flex flex-nowrap h-full w-full bg-primary">
+                <div className="md:w-1/6 ">
+                    <div className="md:flex items-center md:absolute h-full"> 
+                        <div className="md:fixed hidden md:flex w-auto text-white  h-auto">
                             <div className=" h-full ">
 
                             
@@ -58,10 +58,10 @@ export default function Inicio(){
 
                             </div>
                             <div className="flex items-center border-none bg-slate-600 p-2 relative -left-24 top-0 hover:left-0 transition-all duration-300 ease-linear hover:cursor-pointer">
-                            <a href="https://drive.google.com/file/d/1YcO6fVKTf-Y-UxFMZJ3BeVcdYFCRIJ60/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                                <div className="flex items-center">
-                                    <span className="pr-4">Curriculum</span><FaUser className="text-2xl"/>
-                                </div>
+                                <a href="https://drive.google.com/file/d/1YcO6fVKTf-Y-UxFMZJ3BeVcdYFCRIJ60/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                                    <div className="flex items-center">
+                                        <span className="pr-4">Curriculum</span><FaUser className="text-2xl"/>
+                                    </div>
                                 </a>
                             </div>
                             </div>
@@ -69,8 +69,8 @@ export default function Inicio(){
                     </div>
                         
                 </div>
-                <div className="w-5/6">
-                    <div className="flex items-center h-full">
+                <div className="md:w-5/6  p-5 w-full h-full">
+                    <div className="flex items-center justify-center  h-full">
                     <div>
                         <div className="flex items-center">
                         <span className="text-orange-600 font-bold font-serif text-sm md:text-4xl pr-3">¡Hola Mundo! </span><img className="w-7 md:w-10" src={images} alt="" /><span className="text-yellow-600 pl-3 font-bold font-serif text-base md:text-4xl">Soy Frank Smith</span>
@@ -78,18 +78,23 @@ export default function Inicio(){
                         <div>
                             <span className="md:text-6xl text-4xl text-gray-500 font-bold">Desarrollador full stack </span>
                         </div>
+                        <div className="w-full">
+                            <p className="md:w-1/2 text-gray-300 text-lg">Bienvenido a mi portafolio, donde se presentan algunos de mis trabajos con la intención de mostrar mis conocimientos. También se encuentran mi CV, mis redes sociales y otras formas para contactarme.</p>
+                        </div>
                         <div >
-                            <a href="#proyectos"><button className="text-white flex items-center  text-2xl border-2 border-solid border-white rounded-lg px-3 mt-3 w-auto">Ver Proyectos <FaArrowRight className="ml-2 text-xl"/></button></a>
+                        <ScrollIntoView smooth={true} selector="#proyectos">
+                            <button className="text-white flex items-center  text-2xl border-2 border-solid border-white rounded-lg px-3 mt-3 w-auto">Ver Proyectos <FaArrowRight className="ml-2 text-xl"/></button>
+                        </ScrollIntoView>
+                            
                         </div>
                         </div>
                         
                     </div>
                 </div>
             </div>
-
+            </div>
+           
         </div>
-        </a>
-        </>
         
     )
 }

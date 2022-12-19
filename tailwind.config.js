@@ -10,14 +10,22 @@ module.exports = {
       'hero-pattern': "url('images/banner.jpeg')",
       
     },
+      backgroundColor:{
+        'favorite1': "#152235",
+        'favorite2':"#161d30"
+      },
       height:{
-        'screen-1':'92.1vh'
+        'screen-1':'100vh'
       },
       colors:{
-        'primary':'rgba(0, 0, 0, 0.7)'
+        'primary':'rgba(0, 0, 0, 0.7)',
+        'favorite_white':'rgba(255,255,255,0.1)'
       },
       backgroundSize:{
         'size':'100% 90%'
+      },
+      borderWidth:{
+        '1px':'1px'
       },
       keyframes: {
         wiggle: {

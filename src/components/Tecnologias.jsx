@@ -1,8 +1,8 @@
 export default function Teconologias(){
     return(
         <>
-        <a name="tecnologías">
-        <div className="h-screen-1 pt-14 mb-72">
+        {/* <a className=""> */}
+        <div id="tecnologias" className="h-screen-1 pt-14 mb-72 bg-red-500">
         <div className="flex flex-nowrap h-full">
                 <div className="w-1/6 ">
                     
@@ -159,7 +159,7 @@ export default function Teconologias(){
                 </div>
             </div>
         </div>
-        </a>
+        {/* </a> */}
         </>
         
     )

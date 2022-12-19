@@ -15,10 +15,9 @@ export default function App() {
           <NavBar />,
         <Inicio />,
         <Sobremi />,
-        <Teconologias />,
+        // <Teconologias />,
         <Proyectos />,
-        <br />,
-        <br />,<br />,<br />,<br />,<br />,<br />,<br />,<br />,<br />,<br />,
+        
         <Contacto />
         ]} />
         
